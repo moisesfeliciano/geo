@@ -26,3 +26,20 @@
 
 =========================================================================
 
+
+    Commit: Modificando arquivo README, com correções de formatação
+
+==========================================================================
+
+## Download dos arquivos binarios do Geoip, para consulta de cidades e países
+
+	[Github/GeoLite](https://github.com/P3TERX/GeoLite.mmdb?tab=readme-ov-file)
+	
+	Criar dentro da aplicação "core" um diretório com o nome "geoip"
+	
+	Copia os arquivos "GeoLite2-City.mmdb" e "GeoLite2-Country.mmdb"
+	para dentro do diretório "geoip"
+	
+Commit: Download dos arquivos binarios do Geoip, para consulta de cidades e países
+
+=============================================================================
