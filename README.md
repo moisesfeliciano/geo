@@ -47,3 +47,22 @@ Commit: Download dos arquivos binarios do Geoip, para consulta de cidades e paí
 Commit: Modificando arquivo README, correção de link (Github/Geolite)
 
 ===================================================================
+
+### Utilizando uma API da Empresa "Yelp" para fazer buscas:
+ 	
+ 	[Yelp](https://www.yelp.com)
+ 	
+ 	Será preciso fazer uma conta no site.
+ 	Depois no rodapé do site clicar em Programadores/Yelp Fusion/Get Started
+ 	Cria o app e na opção "API Key" copia a chave e salva em algum lugar
+
+
+### Fazendo configurações básicas no settings
+
+### Corrigindo localização do diretório "geoip"
+
+	core/geoip/GeoLite2-City.mmdb -> geoip/GeoLite2-City.mmdb
+    core/geoip/GeoLite2-Country.mmdb -> geoip/GeoLite2-Country.mmdb
+        
+
+Commit: Utilizando uma API da Empresa (Yelp) para fazer buscas, configurações básicas no settings e corrigindo localização do diretório (geoip)

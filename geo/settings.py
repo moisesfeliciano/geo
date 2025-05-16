@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+import os
+
+#from django.conf.global_settings import LOGOUT_REDIRECT_URL
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,12 +29,13 @@ SECRET_KEY = 'django-insecure-2el!lx-fl2#up4z$4+^h*%c3k-q-10s4cxahr)=*n-lhzce2vh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +59,7 @@ ROOT_URLCONF = 'geo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -114,6 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+YELP_API_KEY = 'ErLSOFZmQyBNa7YzzCBVPPZMySgk0Vu7hfHGJVok-5dnI9USnKK4_9BDugrhjjDEhOqPxrWdE9bkR6Gi_oU57Jiona2kvigH39HMhuLsgQSgHh0KgviDmQSRoIOVZ3Yx'
+
+GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
+
+LOGOUT_REDIRECT_URL = 'index'
 STATIC_URL = 'static/'
 
 # Default primary key field type
